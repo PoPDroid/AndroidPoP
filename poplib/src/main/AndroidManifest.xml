@@ -3,7 +3,8 @@
     package="com.yleg.poplib">
 
     <application>
-        <activity android:name=".PoPChallenge"></activity>
+        <activity android:name=".PoPChallenge"
+            android:theme="@style/Theme.AppCompat.Light.NoActionBar.FullScreen"></activity>
     </application>
 
 </manifest>

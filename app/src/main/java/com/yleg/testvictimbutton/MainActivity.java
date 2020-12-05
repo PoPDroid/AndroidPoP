@@ -15,7 +15,6 @@ import com.yleg.poplib.PoPChallenge;
 public class MainActivity extends AppCompatActivity {
 
     int LAUNCH_SECOND_ACTIVITY = 1;
-    boolean pop = false;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -42,7 +41,6 @@ public class MainActivity extends AppCompatActivity {
         if (requestCode == LAUNCH_SECOND_ACTIVITY) {
             if(resultCode == Activity.RESULT_OK){
                 Boolean result=data.getBooleanExtra("PoP",false);
-                pop = result;
                 if(result){
 
                     //enter code here
