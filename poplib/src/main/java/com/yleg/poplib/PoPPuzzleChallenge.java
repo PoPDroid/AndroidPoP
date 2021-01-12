@@ -97,8 +97,8 @@ public class PoPPuzzleChallenge extends AppCompatActivity implements SensorEvent
     public void onSensorChanged(SensorEvent event) {
         // TODO Auto-generated method stub
         if (event.sensor.getType() == Sensor.TYPE_ACCELEROMETER) {
-            x -= (int) event.values[0]*2;
-            y += (int) (event.values[1] - 1)*2;
+            x -= (int) event.values[0]*2.5;
+            y += (int) (event.values[1] - 1)*2.5;
         }
     }
 
