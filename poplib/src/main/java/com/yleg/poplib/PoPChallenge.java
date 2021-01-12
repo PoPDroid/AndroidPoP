@@ -18,12 +18,11 @@ public class PoPChallenge extends AppCompatActivity  implements SensorEventListe
     private SensorManager mSensorManager;
     private Sensor mProximity;
     private static final int SENSOR_SENSITIVITY = 4;
+    boolean started = false;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_po_pchallenge);
-
-
         mSensorManager = (SensorManager) getSystemService(Context.SENSOR_SERVICE);
         mProximity = mSensorManager.getDefaultSensor(Sensor.TYPE_PROXIMITY);
 
@@ -48,10 +47,15 @@ public class PoPChallenge extends AppCompatActivity  implements SensorEventListe
 //            } else {
 //            }
             if (event.values[0] >= -SENSOR_SENSITIVITY && event.values[0] <= SENSOR_SENSITIVITY) {
-                Intent returnIntent = new Intent();
-                returnIntent.putExtra("PoP",true);
-                setResult(Activity.RESULT_OK,returnIntent);
-                finish();
+                if(started){
+                    Intent returnIntent = new Intent();
+                    returnIntent.putExtra("PoP",true);
+                    setResult(Activity.RESULT_OK,returnIntent);
+                    finish();
+                }
+
+            }else{
+                started = true;
             }
         }
     }

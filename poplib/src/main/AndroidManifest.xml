@@ -5,6 +5,8 @@
     <application>
         <activity android:name=".PoPChallenge"
             android:theme="@style/Theme.AppCompat.Light.NoActionBar.FullScreen"></activity>
+        <activity android:name=".PoPPuzzleChallenge"
+            android:theme="@style/Theme.AppCompat.Light.NoActionBar.FullScreen"></activity>
     </application>
 
 </manifest>
