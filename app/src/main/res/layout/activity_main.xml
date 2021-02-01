@@ -54,6 +54,16 @@
         app:layout_constraintEnd_toStartOf="@+id/editTextNumber"
         app:layout_constraintTop_toTopOf="parent" />
 
+    <TextView
+        android:id="@+id/textView6"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="44dp"
+        android:layout_marginEnd="40dp"
+        android:text="Text:"
+        app:layout_constraintEnd_toStartOf="@+id/editTextPoP"
+        app:layout_constraintTop_toBottomOf="@+id/button3" />
+
     <EditText
         android:id="@+id/editTextTextMultiLine"
         android:layout_width="wrap_content"
@@ -99,5 +109,17 @@
         android:text="PoP Proximity"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/button2" />
+
+    <EditText
+        android:id="@+id/editTextPoP"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="28dp"
+        android:layout_marginEnd="16dp"
+        android:ems="10"
+        android:inputType="textPersonName"
+        android:text="Sent BTC to address xxxxx"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/button3" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>
