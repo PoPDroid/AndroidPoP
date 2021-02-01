@@ -37,7 +37,11 @@ public class MainActivity extends AppCompatActivity {
         Intent myint = new Intent(this, PoPPuzzleChallenge.class);
         EditText et = findViewById(R.id.editTextNumber);
         int num = Integer.parseInt(et.getText().toString());
+        EditText etp = findViewById(R.id.editTextPoP);
+
+        String txt = (etp.getText().toString());
         myint.putExtra("PoPDepth",num);
+        myint.putExtra("PoPText",txt);
         startActivityForResult(myint, LAUNCH_SECOND_ACTIVITY);
 
     }

@@ -43,15 +43,23 @@ public class PoPPuzzleChallenge extends AppCompatActivity implements SensorEvent
     public int startx;
     public int starty;
     private int mindepth=10;
+    private String popText = "";
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         setRequestedOrientation (ActivityInfo.SCREEN_ORIENTATION_PORTRAIT);
         super.onCreate(savedInstanceState);
-        int dpt = getIntent().getExtras().getInt("PoPDepth",2);
-        depth =Math.min(dpt,mindepth);
-        sensorManager = (SensorManager) getSystemService(SENSOR_SERVICE);
-        accelerometer = sensorManager
-                .getDefaultSensor(Sensor.TYPE_ACCELEROMETER);
+        try{
+            int dpt = getIntent().getExtras().getInt("PoPDepth",2);
+            String popt = getIntent().getExtras().getString("PoPText","");
+            popText = popt;
+            depth =Math.min(dpt,mindepth);
+            sensorManager = (SensorManager) getSystemService(SENSOR_SERVICE);
+            accelerometer = sensorManager
+                    .getDefaultSensor(Sensor.TYPE_ACCELEROMETER);
+        }catch (Exception e){
+
+        }
+
     }
 
     @Override
@@ -370,12 +378,17 @@ public class PoPPuzzleChallenge extends AppCompatActivity implements SensorEvent
 
             Paint paint2=new Paint();
             paint2.setTextSize(60);
+            Paint paint3=new Paint();
+            paint3.setTextSize(50);
+            paint3.setColor(Color.WHITE);
 
             DisplayMetrics displayMetrics = new DisplayMetrics();
             getWindowManager().getDefaultDisplay().getMetrics(displayMetrics);
             int screenWidth = displayMetrics.widthPixels;
+            int screenHeight = displayMetrics.heightPixels;
             canvas.drawText(currtext1, 140- paint2.getTextSize(), 100, paint2);
             canvas.drawText(currtext2, (screenWidth/2) + 140- paint2.getTextSize(), 100, paint2);
+            canvas.drawText(popText, (screenWidth/4), screenHeight/8 +10, paint3);
             boolean hitWrongTarget = false;
             int wrongTargetId = -1;
             for (int i=0; i<mWrongTargets.size(); i++) {
