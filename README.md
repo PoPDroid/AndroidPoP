@@ -21,7 +21,7 @@ dependencies {
 }
 ```
 
-In the source code, Identify the event handler on which to add PoP challenge (eg: viewGo.setOnClickListener).
+In the source code of the app you wish to protect, identify the event handler on which to add PoP challenge (eg: viewGo.setOnClickListener).
 ```java
         viewGo = view.findViewById(R.id.send_coins_go);
         viewGo.setOnClickListener(v -> {
