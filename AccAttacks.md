@@ -1,4 +1,4 @@
-#Huobi withdrawal 
+# Huobi withdrawal 
 Showing how an attack can target different types of 2FA (sms,google auth, email) 
 Video: 
 
@@ -22,7 +22,7 @@ Device: Samsung Galaxy S8
 Android version: 9
 App version: 6.1.1
 
-#Coinbase Withdrawal 
+# Coinbase Withdrawal 
 Showing how an attack can be launched remotely (integrated in metasploit) and in a covert manner with an overlay when launching - as reported to coinbase
 Video: 
 
@@ -39,7 +39,7 @@ Device: Nexus 5x
 Android version: 7
 App version: 6.55.0
 
-#Binance withdrawal 
+# Binance withdrawal 
 Showing how an attack can be launched remotely (integrated in metasploit) and in a covert manner with an overlay when launching. Also Showing how an attacker can steal 2FA and integrate the stolen token into the attack - as reported to binance
 Video: 
 
@@ -59,7 +59,7 @@ Device: Nexus 5x
 Android version: 7
 App version: 1.21.1
 
-#Binance wallet whitelist attack 
+# Binance wallet whitelist attack 
 Forcing the addition of the attacker’s wallet to the whitelisted addresses - still vulnerable even after binance patched. This could be even more of a justification for PoP
 Video:
 
@@ -87,7 +87,7 @@ Device: Samsung Galaxy S8
 Android version: 9
 App version: 1.35.2
 
-#Coinbase pin unlock 
+# Coinbase pin unlock 
 Showing how an accessibility service can force unlock the victim app app
 Video: 
 
@@ -99,7 +99,7 @@ Device: Nexus 5x
 Android version: 7
 App version: 6.55.0
 
-#Binance pattern unlock 
+# Binance pattern unlock 
 Showing how an accessibility service can force unlock the app
 Video: 
 
@@ -111,7 +111,7 @@ Device: Samsung Galaxy S8
 Android version: 9
 App version: 1.35.2
 
-#Huobi pin unlock 
+# Huobi pin unlock 
 Showing how an accessibility service can force unlock the app by for
 Video:
 
