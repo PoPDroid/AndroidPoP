@@ -3,8 +3,10 @@
 
 
 
-Huobi withdrawal showing how an attack can target different types of 2FA (sms,google auth, email) - to be reported to huobi
+#Huobi withdrawal 
+Showing how an attack can target different types of 2FA (sms,google auth, email) 
 Video: 
+
 [![](http://img.youtube.com/vi/7rKeRlfDrkw/0.jpg)](http://www.youtube.com/watch?v=7rKeRlfDrkw "Huobi Withdraw")
 
 acc service opens huobi 00:04
@@ -25,8 +27,10 @@ Device: Samsung Galaxy S8
 Android version: 9
 App version: 6.1.1
 
-Coinbase Withdrawal showing how an attack can be launched remotely (integrated in metasploit) and in a covert manner with an overlay when launching - as reported to coinbase
+#Coinbase Withdrawal 
+Showing how an attack can be launched remotely (integrated in metasploit) and in a covert manner with an overlay when launching - as reported to coinbase
 Video: 
+
 [![](http://img.youtube.com/vi/MLHUin479kI/0.jpg)](http://www.youtube.com/watch?v=MLHUin479kI "Coinbase Withdraw")
 
 Victim has euro 9.95 worth of BTC in their wallet 00:06
@@ -40,8 +44,10 @@ Device: Nexus 5x
 Android version: 7
 App version: 6.55.0
 
-Binance withdrawal showing how an attack can be launched remotely (integrated in metasploit) and in a covert manner with an overlay when launching. Also Showing how an attacker can steal 2FA and integrate the stolen token into the attack - as reported to binance
+#Binance withdrawal 
+Showing how an attack can be launched remotely (integrated in metasploit) and in a covert manner with an overlay when launching. Also Showing how an attacker can steal 2FA and integrate the stolen token into the attack - as reported to binance
 Video: 
+
 [![](http://img.youtube.com/vi/NE4rX27nQ8A/0.jpg)](http://www.youtube.com/watch?v=NE4rX27nQ8A "Binance Withdraw")
 
 Attacker starts by remotely commanding the accessibility trojan to steal the current 2FA code from the google authenticator app 00:05
@@ -58,8 +64,10 @@ Device: Nexus 5x
 Android version: 7
 App version: 1.21.1
 
-Binance wallet whitelist attack forcing the addition of the attacker’s wallet to the whitelisted addresses - still vulnerable even after binance patched. This could be even more of a justification for PoP
+#Binance wallet whitelist attack 
+Forcing the addition of the attacker’s wallet to the whitelisted addresses - still vulnerable even after binance patched. This could be even more of a justification for PoP
 Video:
+
 [![](http://img.youtube.com/vi/W_RUHK31UCw/0.jpg)](http://www.youtube.com/watch?v=W_RUHK31UCw "Binance Whitelist")
 
 Accessibility trojan opens binance 00:04
@@ -84,8 +92,10 @@ Device: Samsung Galaxy S8
 Android version: 9
 App version: 1.35.2
 
-Coinbase pin unlock showing how an accessibility service can force unlock the victim app app
+#Coinbase pin unlock 
+Showing how an accessibility service can force unlock the victim app app
 Video: 
+
 [![](http://img.youtube.com/vi/vmZNzONYhlU/0.jpg)](http://www.youtube.com/watch?v=vmZNzONYhlU "Coinbase Unlock")
 
 Accessibility trojan opens coinbase app and enters pin 
@@ -94,8 +104,10 @@ Device: Nexus 5x
 Android version: 7
 App version: 6.55.0
 
-Binance pattern unlock showing how an accessibility service can force unlock the app
+#Binance pattern unlock 
+Showing how an accessibility service can force unlock the app
 Video: 
+
 [![](http://img.youtube.com/vi/5XTwU_9tqHw/0.jpg)](http://www.youtube.com/watch?v=5XTwU_9tqHw "Binance Unlock")
 
 Accessibility trojan opens Binance app and swipes unlock pattern
@@ -104,8 +116,11 @@ Device: Samsung Galaxy S8
 Android version: 9
 App version: 1.35.2
 
-Huobi pin unlock showing how an accessibility service can force unlock the app by for
-Video: [![](http://img.youtube.com/vi/8Yz0Ugb6oUw/0.jpg)](http://www.youtube.com/watch?v=8Yz0Ugb6oUw "Huobi unlock")
+#Huobi pin unlock 
+Showing how an accessibility service can force unlock the app by for
+Video:
+
+[![](http://img.youtube.com/vi/8Yz0Ugb6oUw/0.jpg)](http://www.youtube.com/watch?v=8Yz0Ugb6oUw "Huobi unlock")
 
 Accessibility trojan opens Huobi app and swipes unlock pattern
 Tested on 
