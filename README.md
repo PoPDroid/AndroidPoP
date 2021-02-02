@@ -83,7 +83,10 @@ If successful, add original event handler code
 
 # Example integration:
 The following project is an example of the PoP challenge integrated into an open source Crypto wallet:
-https://github.com/yonasleguesse/Bitcoin-Wallet
+* Original
+    * https://github.com/bitcoin-wallet/bitcoin-wallet
+* Modified with PoP
+    * https://github.com/yonasleguesse/Bitcoin-Wallet
 
 [![](http://img.youtube.com/vi/eq_LDoOGdxk/0.jpg)](http://www.youtube.com/watch?v=eq_LDoOGdxk "PoP in wallet")
 
