@@ -5,8 +5,11 @@ Video:
 [![](http://img.youtube.com/vi/7rKeRlfDrkw/0.jpg)](http://www.youtube.com/watch?v=7rKeRlfDrkw "Huobi Withdraw")
 
 * Attack steps:
+
 ** acc service opens huobi 00:04
+
 ** clicks on bitcoin wallet  00:07
+
 ** clicks on withdraw 00:10
 ** populates attackers address 00:10
 ** selects ALL in 'amount' (i.e. empties all available funds) 00:12
