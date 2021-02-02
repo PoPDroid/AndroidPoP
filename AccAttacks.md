@@ -1,6 +1,7 @@
 # Huobi withdrawal 
 Showing how an attack can target different types of 2FA (sms,google auth, email) 
-Video: 
+
+* Video: 
 
 [![](http://img.youtube.com/vi/7rKeRlfDrkw/0.jpg)](http://www.youtube.com/watch?v=7rKeRlfDrkw "Huobi Withdraw")
 
@@ -25,7 +26,8 @@ Video:
 
 # Coinbase Withdrawal 
 Showing how an attack can be launched remotely (integrated in metasploit) and in a covert manner with an overlay when launching - as reported to coinbase
-Video: 
+
+* Video: 
 
 [![](http://img.youtube.com/vi/MLHUin479kI/0.jpg)](http://www.youtube.com/watch?v=MLHUin479kI "Coinbase Withdraw")
 
@@ -43,7 +45,8 @@ Video:
 
 # Binance withdrawal 
 Showing how an attack can be launched remotely (integrated in metasploit) and in a covert manner with an overlay when launching. Also Showing how an attacker can steal 2FA and integrate the stolen token into the attack - as reported to binance
-Video: 
+
+* Video: 
 
 [![](http://img.youtube.com/vi/NE4rX27nQ8A/0.jpg)](http://www.youtube.com/watch?v=NE4rX27nQ8A "Binance Withdraw")
 
@@ -64,7 +67,8 @@ Video:
 
 # Binance wallet whitelist attack 
 Forcing the addition of the attacker’s wallet to the whitelisted addresses - still vulnerable even after binance patched. This could be even more of a justification for PoP
-Video:
+
+* Video: 
 
 [![](http://img.youtube.com/vi/W_RUHK31UCw/0.jpg)](http://www.youtube.com/watch?v=W_RUHK31UCw "Binance Whitelist")
 
@@ -93,7 +97,8 @@ Video:
 
 # Coinbase pin unlock 
 Showing how an accessibility service can force unlock the victim app app
-Video: 
+
+* Video: 
 
 [![](http://img.youtube.com/vi/vmZNzONYhlU/0.jpg)](http://www.youtube.com/watch?v=vmZNzONYhlU "Coinbase Unlock")
 
@@ -106,7 +111,8 @@ Video:
 
 # Binance pattern unlock 
 Showing how an accessibility service can force unlock the app
-Video: 
+
+* Video: 
 
 [![](http://img.youtube.com/vi/5XTwU_9tqHw/0.jpg)](http://www.youtube.com/watch?v=5XTwU_9tqHw "Binance Unlock")
 
@@ -119,7 +125,8 @@ Video:
 
 # Huobi pin unlock 
 Showing how an accessibility service can force unlock the app by for
-Video:
+
+* Video: 
 
 [![](http://img.youtube.com/vi/8Yz0Ugb6oUw/0.jpg)](http://www.youtube.com/watch?v=8Yz0Ugb6oUw "Huobi unlock")
 
