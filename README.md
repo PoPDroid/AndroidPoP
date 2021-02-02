@@ -88,6 +88,8 @@ The following project is an example of the PoP challenge integrated into an open
 * Modified with PoP
     * https://github.com/yonasleguesse/Bitcoin-Wallet
 
+* Video: 
+
 [![](http://img.youtube.com/vi/eq_LDoOGdxk/0.jpg)](http://www.youtube.com/watch?v=eq_LDoOGdxk "PoP in wallet")
 
 The wallet has been modified to include a PoP challenge when the user clicks on the 'Send' button.
