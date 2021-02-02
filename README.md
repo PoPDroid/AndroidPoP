@@ -85,6 +85,8 @@ If successful, add original event handler code
 The following project is an example of the PoP challenge integrated into an open source Crypto wallet:
 https://github.com/yonasleguesse/Bitcoin-Wallet
 
+[![](http://img.youtube.com/vi/eq_LDoOGdxk/0.jpg)](http://www.youtube.com/watch?v=eq_LDoOGdxk "PoP in wallet")
+
 The wallet has been modified to include a PoP challenge when the user clicks on the 'Send' button.
 
 The following commit log outlines the changes required when updating the crypto wallet:
