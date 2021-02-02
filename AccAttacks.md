@@ -4,23 +4,24 @@ Video:
 
 [![](http://img.youtube.com/vi/7rKeRlfDrkw/0.jpg)](http://www.youtube.com/watch?v=7rKeRlfDrkw "Huobi Withdraw")
 
-acc service opens huobi 00:04
-clicks on bitcoin wallet  00:07
-clicks on withdraw 00:10
-populates attackers address 00:10
-selects ALL in 'amount' (i.e. empties all available funds) 00:12
-clicks on withdraw 00:13
-clicks on confirm that you understand danger :) 00:15
-asks security page to send out email and SMS codes 00:16
-opens Google auth and steals 2fa code 00:18
-opens Gmail and steals 2fa code 00:24
-opens Messaging app and steals 2FA code 00:25
-opens huobi again and populates stolen codes 00:34
-confirms transaction 00:37
-Tested on 
-Device: Samsung Galaxy S8
-Android version: 9
-App version: 6.1.1
+* Attack steps:
+** acc service opens huobi 00:04
+** clicks on bitcoin wallet  00:07
+** clicks on withdraw 00:10
+** populates attackers address 00:10
+** selects ALL in 'amount' (i.e. empties all available funds) 00:12
+** clicks on withdraw 00:13
+** clicks on confirm that you understand danger :) 00:15
+** asks security page to send out email and SMS codes 00:16
+** opens Google auth and steals 2fa code 00:18
+** opens Gmail and steals 2fa code 00:24
+** opens Messaging app and steals 2FA code 00:25
+** opens huobi again and populates stolen codes 00:34
+** confirms transaction 00:37
+*Tested on 
+** Device: Samsung Galaxy S8
+** Android version: 9
+** App version: 6.1.1
 
 # Coinbase Withdrawal 
 Showing how an attack can be launched remotely (integrated in metasploit) and in a covert manner with an overlay when launching - as reported to coinbase
