@@ -88,6 +88,7 @@ https://github.com/yonasleguesse/Bitcoin-Wallet
 The wallet has been modified to include a PoP challenge when the user clicks on the 'Send' button.
 
 The following commit log outlines the changes required when updating the crypto wallet:
+
 https://github.com/yonasleguesse/Bitcoin-Wallet/commit/7d0e8962fc38cc698be8a5a0a53dad96b076818c
 
 Warning: This wallet is for demo purposes. Do not use with your actual crypro funds!
