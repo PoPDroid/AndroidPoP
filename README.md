@@ -86,7 +86,7 @@ The following project is an example of the PoP challenge integrated into an open
 * Original
     * https://github.com/bitcoin-wallet/bitcoin-wallet
 * Modified with PoP
-    * https://github.com/yonasleguesse/Bitcoin-Wallet
+    * https://github.com/PoPDroid/Bitcoin-Wallet
 
 * Video: 
 
@@ -96,7 +96,7 @@ The wallet has been modified to include a PoP challenge when the user clicks on 
 
 The following commit log outlines the changes required when updating the crypto wallet:
 
-https://github.com/yonasleguesse/Bitcoin-Wallet/commit/7d0e8962fc38cc698be8a5a0a53dad96b076818c
+https://github.com/PoPDroid/Bitcoin-Wallet/commit/7d0e8962fc38cc698be8a5a0a53dad96b076818c
 
 Warning: This wallet is for demo purposes. Do not use with your actual crypro funds!
 
