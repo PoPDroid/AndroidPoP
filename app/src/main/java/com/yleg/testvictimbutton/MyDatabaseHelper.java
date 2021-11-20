@@ -70,12 +70,71 @@ public class MyDatabaseHelper extends SQLiteOpenHelper {
     }
 
 
+
+    // Select values of todo
+    public int getCurrentLevel() {
+        SQLiteDatabase db = this.getReadableDatabase();
+        int res = 0;
+
+        String query = "SELECT COUNT(*) FROM " + TABLE_TODO;
+        Cursor mcursor = db.rawQuery(query, null);
+
+        if (mcursor != null) {
+            mcursor.moveToFirst();
+            try{
+                res = mcursor.getInt(0);
+            }catch (Exception e){
+
+            }
+        }
+
+        return res;
+
+    }
+
+    // Select values of todo
+    public int GetCurrentDepth() {
+        SQLiteDatabase db = this.getReadableDatabase();
+        int res = 0;
+
+        String query = "SELECT MAX(depth) FROM " + TABLE_TODO;
+        Cursor mcursor = db.rawQuery(query, null);
+
+        if (mcursor != null) {
+            mcursor.moveToFirst();
+            try{
+                res = mcursor.getInt(0);
+            }catch (Exception e){
+
+            }
+        }
+
+        return res;
+
+    }
+
     // Select values of todo
     public Cursor GetAllPuzzleLogs() {
         SQLiteDatabase db = this.getReadableDatabase();
 
 
         String query = "SELECT * FROM " + TABLE_TODO;
+        Cursor mcursor = db.rawQuery(query, null);
+
+        if (mcursor != null) {
+            mcursor.moveToFirst();
+        }
+
+        return mcursor;
+
+    }
+
+    // Select values of todo
+    public Cursor resetPuzzleLogs() {
+        SQLiteDatabase db = this.getReadableDatabase();
+
+
+        String query = "DELETE FROM " + TABLE_TODO;
         Cursor mcursor = db.rawQuery(query, null);
 
         if (mcursor != null) {
