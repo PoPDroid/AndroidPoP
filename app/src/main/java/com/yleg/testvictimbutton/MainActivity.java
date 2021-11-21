@@ -137,8 +137,8 @@ public class MainActivity extends AppCompatActivity {
 
                         startButton.setVisibility(View.VISIBLE);
                         startButton.setText("Start Trial Run PoPLar");
-                        startButton.setVisibility(View.VISIBLE);
-                        startButton.setText("Start Trial Run PoPL-Face");
+                        startButtonFace.setVisibility(View.VISIBLE);
+                        startButtonFace.setText("Start Trial Run PoPL-Face");
                         hinttext.setText("Start Trial Run. This will help you familiarize yourself with PoPL");
                         sendButton.setVisibility(View.GONE);
                         resetButton.setVisibility(View.GONE);
