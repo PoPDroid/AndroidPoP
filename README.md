@@ -1,7 +1,7 @@
 # Integration steps overview:
 
 Add maven jitpack repository in your root build.gradle at the end of repositories: (build.gradle (Project))
-https://jitpack.io/#PoPDroid/AndroidPoP/0.3
+https://jitpack.io/#PoPDroid/AndroidPoP/0.4
 
 ```java
 allprojects {
@@ -17,7 +17,7 @@ Add the dependency: (build.gradle (Module))
 ```java
 dependencies {
     ...
-    implementation 'com.github.PoPDroid:AndroidPoP:0.3'
+    implementation 'com.github.PoPDroid:AndroidPoP:0.4'
 }
 ```
 
@@ -45,7 +45,11 @@ Note: you can define the puzzle depth by modifying the intent extra parameter: "
             //    requestFocusFirst();
 
             //updateView();
+            // PoPPuzzleChallenge for PoPLar
             Intent myint = new Intent(getActivity(), PoPPuzzleChallenge.class);
+            // or LivePreviewActivity for PoPL-Face
+            //Intent myint = new Intent(this, LivePreviewActivity.class);
+        
             myint.putExtra("PoPDepth", 2);
             startActivityForResult(myint, LAUNCH_SECOND_ACTIVITY);
         });
