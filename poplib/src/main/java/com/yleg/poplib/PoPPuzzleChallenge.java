@@ -35,7 +35,6 @@ public class PoPPuzzleChallenge extends AppCompatActivity implements SensorEvent
     private int[] correctpath;
     private int[] wrongpath;
     int ballRadius = 15;
-    private int depth;
     private int currLevel;
     private String currtext1;
     private String currtext2;
@@ -43,6 +42,7 @@ public class PoPPuzzleChallenge extends AppCompatActivity implements SensorEvent
     public int startx;
     public int starty;
     private int mindepth=10;
+    private int depth;
     private String popText = "";
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -350,10 +350,27 @@ public class PoPPuzzleChallenge extends AppCompatActivity implements SensorEvent
                     verrect = rect1;
                 }
 
-                y = Math.max(y,verrect.getBounds().top + ballRadius);
-                y = Math.min(y,verrect.getBounds().bottom -ballRadius);
-                x = Math.max(x,horrect.getBounds().left +ballRadius);
-                x = Math.min(x,horrect.getBounds().right - ballRadius);
+                int hortop = horrect.getBounds().top + ballRadius+1;
+                int horbottom = horrect.getBounds().bottom -ballRadius-1;
+                int horleft = horrect.getBounds().left +ballRadius+1;
+                int horright =horrect.getBounds().right - ballRadius-1;
+                int vertop = verrect.getBounds().top + ballRadius+1;
+                int verbottom = verrect.getBounds().bottom -ballRadius-1;
+                int verleft = verrect.getBounds().left +ballRadius+1;
+                int verright =verrect.getBounds().right - ballRadius-1;
+
+                y = Math.max(y,vertop);
+                y = Math.min(y,verbottom);
+                if(y<hortop){
+                    x = Math.max(x,verleft);
+                    x = Math.min(x, verright);
+                }else if(y>horbottom){
+                    x = Math.max(x,verleft);
+                    x = Math.min(x, verright);
+                }else {
+                    x = Math.max(x,horleft);
+                    x = Math.min(x, horright);
+                }
             }
 
             //make sure the ball remains inside the paths

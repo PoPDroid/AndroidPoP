@@ -4,6 +4,7 @@ import androidx.appcompat.app.AppCompatActivity;
 
 import android.app.Activity;
 import android.app.AlertDialog;
+import android.app.LauncherActivity;
 import android.content.ClipData;
 import android.content.ClipboardManager;
 import android.content.Context;
@@ -26,9 +27,11 @@ import com.yleg.poplib.PoPPuzzleChallenge;
 
 import org.w3c.dom.Text;
 
+import facedetection.LivePreviewActivity;
+
 public class MainActivity extends AppCompatActivity {
 
-    private Button startButton, sendButton, resetButton;
+    private Button startButton, startButtonFace, sendButton, resetButton;
     private  TextView hinttext, textnum;
     private int level,depth;
     MyDatabaseHelper db;
@@ -44,6 +47,7 @@ public class MainActivity extends AppCompatActivity {
         updateLogs();
 
         startButton = (Button) findViewById(R.id.button2);
+        startButtonFace = (Button) findViewById(R.id.buttonFace);
         hinttext = (TextView) findViewById(R.id.textViewHint);
         textnum = findViewById(R.id.textViewNumber);
         sendButton = (Button) findViewById(R.id.buttonclip);
@@ -51,7 +55,9 @@ public class MainActivity extends AppCompatActivity {
 
         if(depth==0){
             startButton.setVisibility(View.VISIBLE);
-            startButton.setText("Start Trial Run");
+            startButton.setText("Start Trial Run - PoPLar");
+            startButtonFace.setVisibility(View.VISIBLE);
+            startButtonFace.setText("Start Trial Run - PoPL-Face");
             hinttext.setText("Start Trial Run. This will help you familiarize yourself with PoPL");
             sendButton.setVisibility(View.GONE);
             resetButton.setVisibility(View.GONE);
@@ -76,10 +82,25 @@ public class MainActivity extends AppCompatActivity {
     }
 
     public void onClick(View v){
+
         Intent myint = new Intent(this, PoPPuzzleChallenge.class);
         textnum = findViewById(R.id.textViewNumber);
         int num = Integer.parseInt(textnum.getText().toString());
-       // EditText etp = findViewById(R.id.editTextPoP);
+        // EditText etp = findViewById(R.id.editTextPoP);
+
+        //String txt = (etp.getText().toString());
+        String txt = ("test");
+        myint.putExtra("PoPDepth",num);
+        myint.putExtra("PoPText",txt);
+        startActivityForResult(myint, LAUNCH_SECOND_ACTIVITY);
+
+    }
+    public void onClickFace(View v){
+
+        Intent myint = new Intent(this, LivePreviewActivity.class);
+        textnum = findViewById(R.id.textViewNumber);
+        int num = Integer.parseInt(textnum.getText().toString());
+        // EditText etp = findViewById(R.id.editTextPoP);
 
         //String txt = (etp.getText().toString());
         String txt = ("test");
@@ -115,7 +136,9 @@ public class MainActivity extends AppCompatActivity {
                         db.resetPuzzleLogs();
 
                         startButton.setVisibility(View.VISIBLE);
-                        startButton.setText("Start Trial Run");
+                        startButton.setText("Start Trial Run PoPLar");
+                        startButton.setVisibility(View.VISIBLE);
+                        startButton.setText("Start Trial Run PoPL-Face");
                         hinttext.setText("Start Trial Run. This will help you familiarize yourself with PoPL");
                         sendButton.setVisibility(View.GONE);
                         resetButton.setVisibility(View.GONE);
@@ -168,62 +191,78 @@ public class MainActivity extends AppCompatActivity {
                     if(level>0 && level<4){
                         depth = 3;
                         startButton.setVisibility(View.VISIBLE);
-                        startButton.setText("Start PoPL");
+                        startButton.setText("Start PoPLar");
+                        startButtonFace.setVisibility(View.VISIBLE);
+                        startButtonFace.setText("Start PoPL-Face");
                         hinttext.setText("Start PoPL: " + (25-level)+" runs left." );
                         sendButton.setVisibility(View.GONE);
                         resetButton.setVisibility(View.VISIBLE);
                     }else if(level>3 && level<7){
                         depth = 4;
                         startButton.setVisibility(View.VISIBLE);
-                        startButton.setText("Start PoPL");
+                        startButton.setText("Start PoPLar");
+                        startButtonFace.setVisibility(View.VISIBLE);
+                        startButtonFace.setText("Start PoPL-Face");
                         hinttext.setText("Start PoPL: " + (25-level)+" runs left." );
                         sendButton.setVisibility(View.GONE);
                         resetButton.setVisibility(View.VISIBLE);
                     }else if(level>6 && level<10){
                         depth = 5;
                         startButton.setVisibility(View.VISIBLE);
-                        startButton.setText("Start PoPL");
+                        startButton.setText("Start PoPLar");
+                        startButtonFace.setVisibility(View.VISIBLE);
+                        startButtonFace.setText("Start PoPL-Face");
                         hinttext.setText("Start PoPL: " + (25-level)+" runs left." );
                         sendButton.setVisibility(View.GONE);
                         resetButton.setVisibility(View.VISIBLE);
                     }else if(level>9 && level<13){
                         depth = 6;
                         startButton.setVisibility(View.VISIBLE);
-                        startButton.setText("Start PoPL");
+                        startButton.setText("Start PoPLar");
+                        startButtonFace.setVisibility(View.VISIBLE);
+                        startButtonFace.setText("Start PoPL-Face");
                         hinttext.setText("Start PoPL: " + (25-level)+" runs left." );
                         sendButton.setVisibility(View.GONE);
                         resetButton.setVisibility(View.VISIBLE);
                     }else if(level>12 && level<16){
                         depth = 7;
                         startButton.setVisibility(View.VISIBLE);
-                        startButton.setText("Start PoPL");
+                        startButton.setText("Start PoPLar");
+                        startButtonFace.setVisibility(View.VISIBLE);
+                        startButtonFace.setText("Start PoPL-Face");
                         hinttext.setText("Start PoPL: " + (25-level)+" runs left." );
                         sendButton.setVisibility(View.GONE);
                         resetButton.setVisibility(View.VISIBLE);
                     }else if(level>15 && level<19){
                         depth = 8;
                         startButton.setVisibility(View.VISIBLE);
-                        startButton.setText("Start PoPL");
+                        startButton.setText("Start PoPLar");
+                        startButtonFace.setVisibility(View.VISIBLE);
+                        startButtonFace.setText("Start PoPL-Face");
                         hinttext.setText("Start PoPL: " + (25-level)+" runs left." );
                         sendButton.setVisibility(View.GONE);
                         resetButton.setVisibility(View.VISIBLE);
                     }else if(level>18 && level<22){
                         depth = 9;
                         startButton.setVisibility(View.VISIBLE);
-                        startButton.setText("Start PoPL");
+                        startButton.setText("Start PoPLar");
+                        startButtonFace.setVisibility(View.VISIBLE);
+                        startButtonFace.setText("Start PoPL-Face");
                         hinttext.setText("Start PoPL: " + (25-level)+" runs left." );
                         sendButton.setVisibility(View.GONE);
                         resetButton.setVisibility(View.VISIBLE);
                     }else if(level>21 && level<25){
                         depth = 10;
                         startButton.setVisibility(View.VISIBLE);
-                        startButton.setText("Start PoPL");
+                        startButton.setText("Start PoPLar");
+                        startButtonFace.setVisibility(View.VISIBLE);
+                        startButtonFace.setText("Start PoPL-Face");
                         hinttext.setText("Start PoPL: " + (25-level)+" runs left." );
                         sendButton.setVisibility(View.GONE);
                         resetButton.setVisibility(View.VISIBLE);
                     }else if(level==25){
-
                         startButton.setVisibility(View.GONE);
+                        startButtonFace.setVisibility(View.GONE);
                         sendButton.setVisibility(View.VISIBLE);
                         sendButton.setText("Copy Results");
                         hinttext.setText("Click Copy Results and paste them in the PoPL Timing survey" );
