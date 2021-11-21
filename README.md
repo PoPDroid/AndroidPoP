@@ -1,7 +1,7 @@
 # Integration steps overview:
 
 Add maven jitpack repository in your root build.gradle at the end of repositories: (build.gradle (Project))
-https://jitpack.io/#PoPDroid/AndroidPoP/0.4
+https://jitpack.io/#PoPDroid/AndroidPoP/0.5
 
 ```java
 allprojects {
@@ -17,7 +17,7 @@ Add the dependency: (build.gradle (Module))
 ```java
 dependencies {
     ...
-    implementation 'com.github.PoPDroid:AndroidPoP:0.4'
+    implementation 'com.github.PoPDroid:AndroidPoP:0.5'
 }
 ```
 
