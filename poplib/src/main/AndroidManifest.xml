@@ -15,7 +15,12 @@
             android:theme="@style/Theme.AppCompat.Light.NoActionBar.FullScreen"></activity>
         <activity android:name=".PoPPuzzleChallenge"
             android:theme="@style/Theme.AppCompat.Light.NoActionBar.FullScreen"></activity>
-
+        <activity android:name=".PoPPuzzleChallenge_v2_0"
+            android:theme="@style/Theme.AppCompat.Light.NoActionBar.FullScreen"></activity>
+        <activity android:name=".PoPPuzzleChallenge_v2_1"
+            android:theme="@style/Theme.AppCompat.Light.NoActionBar.FullScreen"></activity>
+        <activity android:name=".PoPPuzzleChallenge_v2_2"
+            android:theme="@style/Theme.AppCompat.Light.NoActionBar.FullScreen"></activity>
         <activity
             android:name="facedetection.LivePreviewActivity"
             android:exported="true"

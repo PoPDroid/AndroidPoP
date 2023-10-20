@@ -20,18 +20,20 @@ import android.hardware.SensorManager;
 import android.os.Bundle;
 import android.util.DisplayMetrics;
 import android.widget.ImageView;
+
 import androidx.appcompat.app.AppCompatActivity;
+
 import java.security.SecureRandom;
 import java.util.ArrayList;
 
-public class PoPPuzzleChallenge extends AppCompatActivity implements SensorEventListener {
+public class PoPPuzzleChallenge_v2_2 extends AppCompatActivity implements SensorEventListener {
 
     private SensorManager sensorManager;
     private Sensor accelerometer;
     private long starttime;
+    AnimatedView animatedView = null;
     public static int x;
     public static int y;
-    AnimatedView animatedView = null;
     private int[] correctpath;
     private int[] wrongpath;
     int ballRadius = 15;
@@ -336,7 +338,7 @@ public class PoPPuzzleChallenge extends AppCompatActivity implements SensorEvent
                 }
             }
             for (ShapeDrawable sd:sectionList
-            ) {
+                 ) {
                 sd.draw(canvas);
             }
             for (ShapeDrawable nd:nodeList
@@ -467,7 +469,7 @@ public class PoPPuzzleChallenge extends AppCompatActivity implements SensorEvent
                     finish();
                 }
                 drawGuide();
-                //   drawBottomNodes();
+             //   drawBottomNodes();
             }else if (hitWrongTarget){
                 mTargetGreen =  new ShapeDrawable(new RectShape());
                 x=startx;
@@ -492,7 +494,7 @@ public class PoPPuzzleChallenge extends AppCompatActivity implements SensorEvent
                     finish();
                 }
                 drawGuide();
-                //  drawBottomNodes();
+              //  drawBottomNodes();
             }else if (intersects(mTargetUp, mBall)&& currLevel>currPassedLevel){
 
                 mTargetGreen =  new ShapeDrawable(new RectShape());
@@ -513,7 +515,7 @@ public class PoPPuzzleChallenge extends AppCompatActivity implements SensorEvent
                     //currtext2 = (currLevel+1) + "/"+ depth + "(" + currPassedLevel+")";
                 }
                 drawGuide();
-                // drawBottomNodes();
+               // drawBottomNodes();
             }
 
             invalidate();

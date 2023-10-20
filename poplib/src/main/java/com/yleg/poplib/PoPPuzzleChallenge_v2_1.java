@@ -20,18 +20,20 @@ import android.hardware.SensorManager;
 import android.os.Bundle;
 import android.util.DisplayMetrics;
 import android.widget.ImageView;
+
 import androidx.appcompat.app.AppCompatActivity;
+
 import java.security.SecureRandom;
 import java.util.ArrayList;
 
-public class PoPPuzzleChallenge extends AppCompatActivity implements SensorEventListener {
+public class PoPPuzzleChallenge_v2_1 extends AppCompatActivity implements SensorEventListener {
 
     private SensorManager sensorManager;
     private Sensor accelerometer;
     private long starttime;
+    AnimatedView animatedView = null;
     public static int x;
     public static int y;
-    AnimatedView animatedView = null;
     private int[] correctpath;
     private int[] wrongpath;
     int ballRadius = 15;
@@ -81,10 +83,10 @@ public class PoPPuzzleChallenge extends AppCompatActivity implements SensorEvent
         int screenWidth = displayMetrics.widthPixels;
         int screenHeight = displayMetrics.heightPixels;
         shift = screenHeight/8;
+        startx=x=screenWidth/2;
         //starty=y=11 + (2*ballRadius);
 
-        starty =screenHeight/4-(ballRadius*2);
-        startx =((3*screenWidth)/8)+ballRadius;
+        starty=y=shift+(width*4)-(ballRadius*2);
         currtext1 = "Place ball in ";
         currtext2 = "green zone";
         correctpath = new int[depth];
@@ -163,19 +165,18 @@ public class PoPPuzzleChallenge extends AppCompatActivity implements SensorEvent
             width = 20;
             shift = screenHeight/8;
             mBall.getPaint().setColor(Color.GREEN);
-            starty =screenHeight/4-(ballRadius*2);
-            startx =((3*screenWidth)/8)+ballRadius;
-            mBall.setBounds(startx,starty,startx+ballRadius*2,starty+ballRadius*2 );
+            starty =shift+(width*4)-(ballRadius*2);
+            mBall.setBounds((screenWidth/2)-ballRadius,starty,(screenWidth/2)+ballRadius,starty+ballRadius*2 );
 
             ShapeDrawable mEntryRect = new ShapeDrawable(new RectShape());
             mEntryRect.getPaint().setColor(Color.BLACK);
-            mEntryRect.setBounds((screenWidth/2)-width,0,(screenWidth/2)+width,screenHeight/4) ;
+            mEntryRect.setBounds((screenWidth/2)-width,0,(screenWidth/2)+width,shift+(width*4)) ;
             rectList.add(mEntryRect);
 
-            ShapeDrawable mitigation = new ShapeDrawable(new RectShape());
-            mitigation.getPaint().setColor(Color.BLACK);
-            mitigation.setBounds(((3*screenWidth)/8),screenHeight/4-(width*2),(5*screenWidth/8),screenHeight/4) ;
-            rectList.add(mitigation);
+//            ShapeDrawable mitigation = new ShapeDrawable(new RectShape());
+//            mitigation.getPaint().setColor(Color.BLACK);
+//            mitigation.setBounds((screenWidth/2)-(width*5),shift+(width*4),(screenWidth/2)+(width*5),shift+(width*4)) ;
+//            rectList.add(mitigation);
 
             drawSplitInRect(0,0+shift, screenWidth, screenHeight/4+shift);
 
@@ -202,8 +203,7 @@ public class PoPPuzzleChallenge extends AppCompatActivity implements SensorEvent
             if(currPassedLevel>= currLevel && currLevel<correctpath.length){
                 int greenpos = correctpath[currLevel];
 
-                fullPath.moveTo(startx , starty+ballRadius);
-                fullPath.lineTo(screenWidth/2 , starty+ballRadius);
+                fullPath.moveTo(screenWidth/2 , 0);
                 fullPath.lineTo(screenWidth/2 , shift);
 
                 if(greenpos==0){
@@ -336,7 +336,7 @@ public class PoPPuzzleChallenge extends AppCompatActivity implements SensorEvent
                 }
             }
             for (ShapeDrawable sd:sectionList
-            ) {
+                 ) {
                 sd.draw(canvas);
             }
             for (ShapeDrawable nd:nodeList
@@ -449,7 +449,7 @@ public class PoPPuzzleChallenge extends AppCompatActivity implements SensorEvent
             if(intersects(mTargetGreen, mBall)){
                 x = startx;
                 y=starty;
-                mBall.setBounds(startx, starty, startx+ballRadius*2, starty+(2*ballRadius));
+                mBall.setBounds(startx-ballRadius, starty, startx, starty+(2*ballRadius));
                 currLevel+=1;
                 currPassedLevel+=1;
                 if(currLevel<depth){
@@ -467,12 +467,12 @@ public class PoPPuzzleChallenge extends AppCompatActivity implements SensorEvent
                     finish();
                 }
                 drawGuide();
-                //   drawBottomNodes();
+             //   drawBottomNodes();
             }else if (hitWrongTarget){
                 mTargetGreen =  new ShapeDrawable(new RectShape());
                 x=startx;
                 y=starty;
-                mBall.setBounds(startx, starty, startx+ballRadius*2, starty+(2*ballRadius));
+                mBall.setBounds(startx-ballRadius, starty, startx, starty+(2*ballRadius));
                 wrongpath[currLevel] = wrongTargetId;
                 currLevel+=1;
                 if(currLevel<depth){
@@ -492,7 +492,7 @@ public class PoPPuzzleChallenge extends AppCompatActivity implements SensorEvent
                     finish();
                 }
                 drawGuide();
-                //  drawBottomNodes();
+              //  drawBottomNodes();
             }else if (intersects(mTargetUp, mBall)&& currLevel>currPassedLevel){
 
                 mTargetGreen =  new ShapeDrawable(new RectShape());
@@ -513,7 +513,7 @@ public class PoPPuzzleChallenge extends AppCompatActivity implements SensorEvent
                     //currtext2 = (currLevel+1) + "/"+ depth + "(" + currPassedLevel+")";
                 }
                 drawGuide();
-                // drawBottomNodes();
+               // drawBottomNodes();
             }
 
             invalidate();
