@@ -46,7 +46,12 @@ Note: you can define the puzzle depth by modifying the intent extra parameter: "
 
             //updateView();
             // PoPPuzzleChallenge for PoPLar
-            Intent myint = new Intent(getActivity(), PoPPuzzleChallenge.class);
+            Intent myint = new Intent(getActivity(), PoPPuzzleChallenge.class); //v2.2 by default
+            //Intent myint = new Intent(getActivity(), PoPPuzzleChallenge_v1.class);
+            //Intent myint = new Intent(getActivity(), PoPPuzzleChallenge_v2_0.class);
+            //Intent myint = new Intent(getActivity(), PoPPuzzleChallenge_v2_1.class);
+            //Intent myint = new Intent(getActivity(), PoPPuzzleChallenge_v2_2.class);
+
             // or LivePreviewActivity for PoPL-Face
             //Intent myint = new Intent(this, LivePreviewActivity.class);
         
