@@ -1,24 +1,26 @@
 # Integration steps overview:
 
-Add maven jitpack repository in your root build.gradle at the end of repositories: (build.gradle (Project))
-https://jitpack.io/#PoPDroid/AndroidPoP/0.6
+Add maven jitpack repository in your root build.gradle at the end of repositories: 
+(Followi instructions on: https://jitpack.io/#PoPDroid/AndroidPoP/0.2)
+
+Step 1: Add it in your root settings.gradle at the end of repositories:
 
 ```java
-allprojects {
-    repositories {
-        jcenter()
-        google()
-        maven { url 'https://jitpack.io' }
-    }
-}
+	dependencyResolutionManagement {
+		repositoriesMode.set(RepositoriesMode.FAIL_ON_PROJECT_REPOS)
+		repositories {
+			mavenCentral()
+			maven { url 'https://jitpack.io' }
+		}
+	}
+
 ```
+Step 2. Add the dependency
 
-Add the dependency: (build.gradle (Module))
 ```java
-dependencies {
-    ...
-    implementation 'com.github.PoPDroid:AndroidPoP:0.6'
-}
+	dependencies {
+	        implementation 'com.github.PoPDroid:AndroidPoP:0.2'
+	}
 ```
 
 In the source code of the app you wish to protect, identify the event handler on which to add PoP challenge (eg: viewGo.setOnClickListener).
@@ -46,14 +48,7 @@ Note: you can define the puzzle depth by modifying the intent extra parameter: "
 
             //updateView();
             // PoPPuzzleChallenge for PoPLar
-            Intent myint = new Intent(getActivity(), PoPPuzzleChallenge.class); //v2.2 by default
-            //Intent myint = new Intent(getActivity(), PoPPuzzleChallenge_v1.class);
-            //Intent myint = new Intent(getActivity(), PoPPuzzleChallenge_v2_0.class);
-            //Intent myint = new Intent(getActivity(), PoPPuzzleChallenge_v2_1.class);
-            //Intent myint = new Intent(getActivity(), PoPPuzzleChallenge_v2_2.class);
-
-            // or LivePreviewActivity for PoPL-Face
-            //Intent myint = new Intent(this, LivePreviewActivity.class);
+            Intent myint = new Intent(getActivity(), PoPPuzzleChallenge.class); 
         
             myint.putExtra("PoPDepth", 2);
             startActivityForResult(myint, LAUNCH_SECOND_ACTIVITY);
