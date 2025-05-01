@@ -1,7 +1,8 @@
 # Integration steps overview:
 
 Add maven jitpack repository in your root build.gradle at the end of repositories: 
-(Followi instructions on: https://jitpack.io/#PoPDroid/AndroidPoP/0.2)
+
+(Follow instructions on: https://jitpack.io/#PoPDroid/AndroidPoP/0.2)
 
 Step 1: Add it in your root settings.gradle at the end of repositories:
 
